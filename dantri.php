@@ -8,5 +8,15 @@ foreach($h as $t){
 
     $a->attr["title"];
 
+
+    $a->href;
+
+
+    $img= $a->find("img",0)->src;
+    $u= "dantri/".basename($img);
+    file_put_contents($u, file_get_contents($img));
+
+
+
     echo "\n";
 }
