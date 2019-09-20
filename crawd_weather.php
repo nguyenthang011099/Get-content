@@ -18,11 +18,14 @@ $t3=$html->find("td.forecast_detail",2);
 $t4=$t3->find("strong",0);
 $t5=$t4->innertext;
 $t6=preg_replace('/\D/',"",$t5 );
-echo $t6;
+echo $t6."\n";
 
 
 $t3=$html->find("td.forecast_detail",3);
 $t4=$t3->find("strong",0);
-echo $t4->innertext;
+$t5= $t4->innertext;
+$t6=preg_replace('/\D/',"",$t5 );
+echo $t6."\n";
+
 
 
