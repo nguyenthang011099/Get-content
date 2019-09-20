@@ -1,11 +1,7 @@
 <?php
 
 include("simple_html_dom.php");
-
-//
-//$html= file_get_html("https://www.accuweather.com/en/vn/hanoi/353412/hourly-weather-forecast/353412");
-//
-//echo $html;
+require_once "dbCon.php";
 
 $html=file_get_html("http://www.nchmf.gov.vn/web/vi-VN/62/19/58/map/Default.aspx");
 
@@ -37,8 +33,13 @@ $w2=$w1->find("strong",0);
 $w3= $w2->innertext;
 $w4=preg_replace('/\D/',"",$w3 );
 
+$qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
+VALUES ('$t4','$h4','$w4','$d3')";
 
-echo $w4;
+mysql_query($qr);
+mysql_close($conn);
+?>
+
 
 
 
