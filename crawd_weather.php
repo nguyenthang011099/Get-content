@@ -33,10 +33,16 @@ $w2=$w1->find("strong",0);
 $w3= $w2->innertext;
 $w4=preg_replace('/\D/',"",$w3 );
 
-$qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
+$qr= "INSERT INTO hanoi (Temprature, Humid, Wind, Description )
 VALUES ('$t4','$h4','$w4','$d3')";
 
-$conn->query($qr);
+
+if ($conn->query($qr) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $qr . "<br>" . $conn->error;
+}
+
 $conn->close();
 
 ?>
