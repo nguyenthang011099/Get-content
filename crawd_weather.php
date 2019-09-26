@@ -36,8 +36,9 @@ $w4=preg_replace('/\D/',"",$w3 );
 $qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
 VALUES ('$t4','$h4','$w4','$d3')";
 
-mysql_query($qr);
-mysql_close($conn);
+$conn->query($qr);
+$conn->close();
+
 ?>
 
 
