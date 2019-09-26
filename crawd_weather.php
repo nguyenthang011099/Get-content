@@ -2,10 +2,10 @@
 
 include("simple_html_dom.php");
 require_once "dbCon.php";
-if (isset($argc)) {
-    for ($i = 2; $i < $argc; $i++) {
-        echo "Get content successfully in "  . $argv[$i] . "\n";
-
+//if (isset($argc)) {
+//    for ($i = 2; $i < $argc; $i++) {
+//        echo "Get content successfully in "  . $argv[$i] . "\n";
+//
 
    $html=file_get_html("http://www.nchmf.gov.vn/web/vi-VN/62/19/58/map/Default.aspx");
 
@@ -37,7 +37,7 @@ if (isset($argc)) {
     $w3= $w2->innertext;
     $w4=preg_replace('/\D/',"",$w3 );
 
-    $qr= "INSERT INTO hanoi (Temprature, Humid, Wind, Description )
+    $qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
     VALUES ('$t4','$h4','$w4','$d3')";
 
 
@@ -49,11 +49,11 @@ if (isset($argc)) {
 
     $conn->close();
 
-    }
-}
-else {
-    echo "argc and argv disabled\n";
-}
+//    }
+//}
+//else {
+//    echo "argc and argv disabled\n";
+//}
 
 
 
