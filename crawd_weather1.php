@@ -1,6 +1,7 @@
 
 <?php
 include('simple_html_dom.php');
+require_once "dbCon.php";
 
 $html=file_get_html('https://www.weather-forecast.com/locations/Hanoi/forecasts/latest');
 
@@ -21,5 +22,17 @@ $h2=preg_replace('/\D/',"",$h1);
 
 $d=$html->find('tr.b-forecast__table-summary',0);
 $d1=$d->find('div.b-forecast__text-limit',0);
-$d1->innertext();
+$d2=$d1->innertext();
 
+
+$qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
+    VALUES ('$t2','$h2','$w2','$d2')";
+
+
+if ($conn->query($qr) === TRUE) {
+    echo "New record created successfully"."\n";
+} else {
+    echo "Error: " . $qr . "<br>" . $conn->error;
+}
+
+$conn->close();
