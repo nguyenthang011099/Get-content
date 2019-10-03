@@ -37,6 +37,7 @@ require_once "dbCon.php";
     $w3= $w2->innertext;
     $w4=preg_replace('/\D/',"",$w3 );
 
+    echo $d3;
     $qr= "INSERT INTO hanoi (Temperature, Humid, Wind, Description )
     VALUES ('$t4','$h4','$w4','$d3')";
 

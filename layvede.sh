@@ -1,4 +1,4 @@
 #!/bin/bash
-cd  "/home/thang/PHP/Simple Dom/"
+cd  "/home/thang/PHP/Simple_Dom/"
 php crawd_weather.php
-echo $(date): Lay roi day >> kttv.log
+echo $(date): Done >> kttv.log
