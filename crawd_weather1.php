@@ -19,3 +19,7 @@ $h1=$h->find('span.b-forecast__table-value',0);
 $h2=preg_replace('/\D/',"",$h1);
 
 
+$d=$html->find('tr.b-forecast__table-summary',0);
+$d1=$d->find('div.b-forecast__text-limit',0);
+$d1->innertext();
+
