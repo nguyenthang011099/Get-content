@@ -14,6 +14,10 @@ $t2=preg_replace('/\D/',"",$t1 );
 $w=$html->find('text.wind-icon-val',0);
 $w1=preg_replace('/\D/',"",$w);
 $w2=substr($w1,0,2);
+if($w2>30){
+    $w2=substr($w1,0,1);
+}
+
 
 $h=$html->find('tr.b-forecast__table-humidity',0);
 $h1=$h->find('span.b-forecast__table-value',0);
