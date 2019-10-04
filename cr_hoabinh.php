@@ -7,6 +7,9 @@ $html=file_get_html('https://www.weather-forecast.com/locations/Hoa-Binh/forecas
 
 
 $t= $html->find('td.temp-color1',0);
+if($t==null){
+    $t=$html->find('td.temp-color2',0);
+}
 $t1= $t->innertext();
 $t2=preg_replace('/\D/',"",$t1 );
 
