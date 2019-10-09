@@ -12,4 +12,10 @@ Creat database to connect
     4,Run file on server with Admin
     5,Show data by web use chart.js https://www.youtube.com/watch?v=cREXtrFiJBc 
     https://www.youtube.com/watch?v=_KVYh9LM0eE
+    
+## Add more model in web
+    1, add search address
+    2, Control time
+    3, option show off
+    
   
