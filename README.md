@@ -8,3 +8,6 @@ Creat database to connect
 
   Setup SFTP server on Ubuntu 
   after connect server succeed, you can remote server
+  tranfer file from computer local to server
+  Run file on server with Admin
+  
