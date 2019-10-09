@@ -8,6 +8,7 @@ $mysqli = new mysqli($dbServername,$dbUsername,$dbPassword,$dbName) or die($mysq
 
 $data1 = '';
 $data2 = '';
+$data3 = '';
 
 //query to get data from the table
 $sql = "SELECT * FROM `HaNoi`  WHERE ID>110 AND (ID DIV 5)";
@@ -18,10 +19,12 @@ while ($row = mysqli_fetch_array($result)) {
 
     $data1 = $data1 . '"'. $row['Temperature'].'",';
     $data2 = $data2 . '"'. $row['Humid'] .'",';
+    $data3 = $data3 . '"'. $row['Wind'] .'",';
 }
 
 $data1 = trim($data1,",");
 $data2 = trim($data2,",");
+$data3 = trim($data3,",");
 ?>
 
 <!DOCTYPE html>
@@ -70,12 +73,18 @@ $data2 = trim($data2,",");
                         borderColor:'rgba(255,99,132)',
                         borderWidth: 3
                     },
-
                         {
                             label: 'Humid',
                             data: [<?php echo $data2; ?>],
                             backgroundColor: 'transparent',
                             borderColor:'rgba(0,255,255)',
+                            borderWidth: 3
+                        },
+                        {
+                            label: 'Wind',
+                            data: [<?php echo $data3; ?>],
+                            backgroundColor: 'transparent',
+                            borderColor:'rgba(100,200,100)',
                             borderWidth: 3
                         }]
             },
