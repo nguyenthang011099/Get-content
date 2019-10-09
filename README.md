@@ -6,8 +6,10 @@ Creat database to connect
 ### Connect to Server
 ## Tham khao Link https://linuxconfig.org/how-to-setup-sftp-server-on-ubuntu-18-04-bionic-beaver-with-vsftpd
 
-  Setup SFTP server on Ubuntu 
-  after connect server succeed, you can remote server
-  tranfer file from computer local to server
-  Run file on server with Admin
+    1,Setup SFTP server on Ubuntu 
+    2,after connect server succeed, you can remote server
+    3,tranfer file from computer local to server
+    4,Run file on server with Admin
+    5,Show data by web use chart.js https://www.youtube.com/watch?v=cREXtrFiJBc 
+    https://www.youtube.com/watch?v=_KVYh9LM0eE
   
