@@ -6,14 +6,15 @@ $dbPassword="I1yYEfSC4HGTN9Vn";
 $dbName="dev_meteorology3";
 $mysqli = new mysqli($dbServername,$dbUsername,$dbPassword,$dbName) or die($mysqli->error);
 
-$address='PhuTho';
+$address='HaNoi';
 
 $data1 = '';
 $data2 = '';
 $data3 = '';
 
 //query to get data from the table
-$sql = "SELECT * FROM `$address`  WHERE ID>90";
+$sql = "SELECT * FROM `$address`  ORDER BY ID DESC LIMIT 50";
+
 $result = mysqli_query($mysqli, $sql);
 
 //loop through the returned data
@@ -66,7 +67,8 @@ $data3 = trim($data3,",");
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],
+                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,
+                    30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50],
                 datasets:
                     [{
                         label: 'Temperature',
@@ -98,6 +100,9 @@ $data3 = trim($data3,",");
             }
         });
     </script>
+
+
+
 </div>
 
 </body>
