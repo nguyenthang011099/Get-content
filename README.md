@@ -16,7 +16,8 @@ Creat database to connect
 ## Note
     1,Diffrence between get, put, scp work with server
     2,https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
-    
+    ex:sftp> put /home/thang/PHP/demo/server.php
+
 ## Add more model in web
     1, add search address
     2, Control time
