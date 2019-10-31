@@ -13,6 +13,9 @@ Creat database to connect
     5,Show data by web use chart.js https://www.youtube.com/watch?v=cREXtrFiJBc 
     https://www.youtube.com/watch?v=_KVYh9LM0eE
     6,run file on server by SSH
+## Note
+    1,Diffrence between get, put, scp work with server
+    2,https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
     
 ## Add more model in web
     1, add search address
